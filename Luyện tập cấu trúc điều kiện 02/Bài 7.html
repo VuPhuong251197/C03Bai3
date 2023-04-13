@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Bài 7 </title>
+</head>
+<body>
+    <h2> Bài 7: Giải phương trình bậc 2. </h2>
+    <p> Nhập số 1 </p><input type="text" id="a">
+    <p> Nhập số 2 </p><input type="text" id="b">
+    <p> Nhập số 3 </p><input type="text" id="c">
+    <button onclick="nhapvao ()"> Kết quả </button>
+    <p id="kq"></p>
+<script>
+    function nhapvao () {
+        let a = document.getElementById('a').value
+        let b = document.getElementById('b').value
+        let c = document.getElementById('c').value
+        let delta = b * b - 4 * a * c
+        if ( delta < 0 ) {
+            document.getElementById('kq').innerHTML = " Phương trình vô nghiệm "
+        }
+        else if ( delta === 0 ) {
+            document.getElementById('kq').innerHTML = " Phương trình có nghiệm kép là x = " + -b / (2*a)
+        }
+    }
+</script>
+
+</body>
+</html>
